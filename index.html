@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <!-- js -->
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 42 24" fill="none" class="logo"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.757 0.132445C19.0206 0.331142 19.1001 0.695758 18.9437 0.988382C18.7839 1.28712 18.6179 1.59721 18.4466 1.91734C16.666 5.2436 14.3052 9.65386 12.3466 13.6788C11.3828 15.6594 10.5214 17.5365 9.87618 19.1384C10.9838 17.3278 12.2759 15.2528 13.2533 13.872C14.3353 12.3435 16.1207 10.257 17.9749 8.43144C18.9033 7.51737 19.8581 6.65962 20.7594 5.96586C21.6504 5.27995 22.5296 4.72249 23.3024 4.44908C23.4224 4.40664 23.5643 4.36933 23.7153 4.36508C23.8689 4.36074 24.0747 4.39035 24.2629 4.53055C24.6555 4.82308 24.6165 5.29205 24.5907 5.46871C24.5568 5.70261 24.4674 5.96016 24.3621 6.21178C24.2531 6.47261 24.1093 6.76818 23.941 7.08883C23.4166 8.08846 22.5967 9.43942 21.6872 10.938C21.4413 11.3431 21.1889 11.7591 20.934 12.1817C20.1655 13.4561 19.3683 14.8014 18.6387 16.1282C20.8743 14.0316 24.3197 11.9831 29.6781 10.5157C30.0071 10.4257 30.3498 10.6037 30.4695 10.9269C30.5892 11.25 30.4467 11.6125 30.1404 11.7638C28.1443 12.7499 26.1096 14.1635 24.6415 15.8133C23.1676 17.4694 22.3315 19.2828 22.5359 21.1019C22.648 22.0984 22.9072 22.3609 23.0051 22.4183C23.0825 22.4637 23.2802 22.5016 23.7078 22.2708C24.1085 22.0547 24.5461 21.686 24.9417 21.2889C25.3321 20.8971 25.6476 20.5123 25.8041 20.3001C25.9184 20.1452 26.0247 19.9758 26.1408 19.7909C26.1857 19.7191 26.2322 19.6452 26.2812 19.5687C26.3624 19.4419 26.4513 19.3078 26.5431 19.1895C26.6281 19.0795 26.7495 18.9375 26.9039 18.8328C27.0643 18.724 27.37 18.5886 27.7175 18.7389C28.0137 18.867 28.1564 19.1316 28.2261 19.2941C28.3732 19.6376 28.4582 20.1716 28.5165 20.8838C28.5303 21.0518 28.5513 21.1684 28.5713 21.2466C28.5826 21.2412 28.5948 21.2351 28.608 21.2284C28.7455 21.1579 28.9149 21.0451 29.1231 20.8907C29.2485 20.7978 29.393 20.6852 29.5481 20.5642C29.86 20.321 30.2153 20.044 30.5461 19.8252C31.0399 19.4987 31.6838 19.1524 32.3565 19.198C33.0206 19.243 33.5584 19.6449 33.9724 19.9613C34.0231 19.9999 34.0732 20.0385 34.1229 20.0768C34.523 20.3847 34.9023 20.6767 35.3819 20.8947C36.3766 21.347 37.9695 21.542 41.025 19.8729C41.3464 19.6974 41.7474 19.819 41.9207 20.1444C42.0939 20.4699 41.9739 20.8761 41.6526 21.0516C38.3778 22.8402 36.3368 22.7968 34.8404 22.1163C34.2135 21.8312 33.7119 21.4437 33.32 21.1409C33.2703 21.1026 33.2224 21.0656 33.1764 21.0304C32.7221 20.6833 32.4833 20.5487 32.2682 20.5341C32.0617 20.5201 31.7385 20.6358 31.2689 20.9465C30.9752 21.1407 30.7045 21.3524 30.4233 21.5724C30.2563 21.7031 30.0855 21.8368 29.904 21.9713C29.68 22.1373 29.4409 22.3021 29.2052 22.4231C28.9821 22.5375 28.6799 22.6566 28.3513 22.6293C27.9631 22.5969 27.6597 22.3735 27.4721 22.0448C27.3067 21.7551 27.2313 21.3893 27.199 20.9945C27.1888 20.87 27.178 20.7559 27.1668 20.6517C27.1601 20.6621 27.1534 20.6726 27.1468 20.6831C27.0602 20.8189 26.9646 20.964 26.8634 21.1013C26.6682 21.366 26.3098 21.801 25.8722 22.2401C25.4399 22.674 24.8957 23.1472 24.3293 23.4528C23.7898 23.7437 23.035 23.9829 22.3431 23.5773C21.6717 23.1839 21.3449 22.3434 21.2224 21.2534C20.9579 18.8993 22.0561 16.7184 23.6594 14.9168C24.0723 14.4528 24.5231 14.0087 25.0008 13.5872C21.9848 14.9522 19.9937 16.5161 18.6618 18.0054C16.7012 20.1976 16.1209 22.2799 15.8404 23.4783C15.7631 23.8088 15.4536 24.0283 15.1205 23.9888C14.7874 23.9494 14.5362 23.6635 14.5362 23.3238C14.5362 21.81 15.2946 19.8129 16.2839 17.7798C17.2894 15.7138 18.5964 13.4891 19.8058 11.4837C20.0693 11.0468 20.3274 10.6214 20.5768 10.2104C21.4819 8.71887 22.2706 7.41922 22.7737 6.46045C22.8458 6.32294 22.9108 6.19474 22.9685 6.07599C22.5471 6.31452 22.0728 6.63673 21.5593 7.03197C20.7131 7.68331 19.7996 8.50228 18.8964 9.39162C17.0872 11.1729 15.3559 13.1999 14.3277 14.6522C13.2883 16.1206 11.8644 18.4253 10.6896 20.352C10.4821 20.6923 10.2823 21.021 10.0941 21.3306C9.75263 21.8922 9.44934 22.391 9.20771 22.7826C9.02083 23.0854 8.86542 23.3329 8.75511 23.4989C8.70279 23.5777 8.64857 23.6565 8.6013 23.7157L8.59954 23.7178C8.58549 23.7355 8.52662 23.8098 8.44277 23.8709C8.41611 23.8903 8.36121 23.9277 8.28401 23.957C8.21362 23.9837 8.04876 24.0323 7.84985 23.9686C7.62106 23.8954 7.49369 23.7231 7.43734 23.5868C7.40031 23.4972 7.38955 23.4165 7.38652 23.3641C7.35076 22.862 7.45744 22.2383 7.6347 21.5663C7.81726 20.8742 8.09189 20.0694 8.43285 19.1878C9.11508 17.4238 10.0807 15.3064 11.1608 13.0868C12.6023 10.1245 14.2591 6.95715 15.7411 4.16915C15.3756 4.53837 14.962 4.95769 14.4934 5.43436C10.2073 9.79373 6.01919 15.467 1.23 23.6648C1.04408 23.9831 0.638678 24.0883 0.324495 23.9C0.0103114 23.7118 -0.0936741 23.3011 0.0922373 22.9829C4.91565 14.7265 9.16782 8.95338 13.5566 4.48949C15.7258 2.2831 16.7282 1.2933 17.2343 0.808918C17.4893 0.564731 17.6203 0.447018 17.7114 0.36642C17.7216 0.35746 17.7309 0.34924 17.7396 0.3416C17.805 0.283846 17.8329 0.259162 17.894 0.197096C18.1258 -0.0387118 18.4935 -0.066252 18.757 0.132445ZM23.2855 5.24305C23.2855 5.24305 23.286 5.24857 23.2844 5.26249C23.2843 5.25048 23.2855 5.24305 23.2855 5.24305Z" fill="currentColor" class="logo__path">Logo Mathieu Crepel</path></svg>
+            </a>
+            <div class="header-right">
+                <a class="btn-wrapper" href="">
+                    <div class="btn-tx btn-defalt">{SHAKA MODe}</div>
+                </a>
+                <a class="btn-wrapper" href="">
+                    <div class="btn-tx btn-defalt">Menu</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="h-hero__wrapper">
+            <section class="h-hero__content-wrapper">
+                <div class="container">
+                    <div class="main-tx-block">
+                        <div class="main-tx-top">
+                            <h1>born</h1>
+                        </div>
+                        <div class="main-tx-bottom">
+                            <h1>in</h1>
+                            <h1>the</h1>
+                            <h1>mountain</h1>
+                        </div>
+                    </div>
+                    <div class="main-bottom-tx-block">
+                        <div class="mb-tx-wrapper">
+                            <a href="" class="link">Projects</a>
+                            <a href="" class="link">Timeline</a>
+                            <a href="" class="link">Cause</a>
+                            <a href="" class="link">Partners</a>
+                            <a href="" class="link">Contact</a>
+                            <div class="h-hero__wrapper-embed">
+                                <div class="h-hero__embed-video">
+                                    <video src="./assets/video/Video_introduction_small.mp4" playsinline loop muted preload autoplay></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="h-hero__sticky-wrapper">
+                <div class="h-hero__image-wrapper">
+                    <img src="./assets/img/mountain.avif" class="mountain_img" alt="">
+                    <img src="./assets/img/cloud.avif" class="cloud-right_img" alt="">
+                    <img src="./assets/img/cloud.avif" class="cloud-left_img" alt="">
+                    <div class="h-hero__mask"></div>
+                    <img src="./assets/img/main_img.avif" class="main_img" alt="">
+                </div>
+            </div>
+            <section class="h-hero__about-wrapper">
+                <div class="h-hero__about-mask"></div>
+                <div class="h-hero__about-content">
+                    <div class="h-hero__about-top">
+                        <div class="h-hero__about-img">
+                            <img src="./assets/img/about_img.avif" alt="">
+                        </div>
+                        <h2 class="text__h2">
+                            <span class="h-hero__about-span"></span>
+                            French snowboarder and surfer, blending adrenaline-filled adventures with a passionate commitment to environmental protection and inspiring shared experiences.
+                        </h2>
+                    </div>
+                    <div class="h-hero__about-bot">
+                        <div class="wave__grid">
+                            <div class="wave-top">
+                                <div class="wave-one">
+                                    <div class="wave-tx">2016 banked slalom winner</div>
+                                </div>
+                                <div class="wave-two">
+                                    <div class="wave-tx">2 Times olympian (2006 & 2010)</div>
+                                </div>
+                            </div>
+                            <div class="wave-bot">
+                                <div class="wave-three">
+                                    <div class="wave-tx">2010 X games silver medalist</div>
+                                </div>
+                                <div class="wave-four">
+                                    <div class="wave-tx">2007 2 times FIS world champion</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

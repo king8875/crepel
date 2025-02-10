@@ -1,0 +1,66 @@
+@import './reset.css';
+@import './fonts.css';
+@import './common.css';
+
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: auto;
+}
+.header .header-inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-top: 1.25rem;
+    padding: 0 1.25rem;
+}
+.header .header-inner .logo{
+    position: relative;
+    height: 1.5rem;
+    color: var(--color--light);
+}
+.header .header-right{
+    display: flex;
+    gap: 10px;
+}
+.header .header-right .btn-wrapper{
+    position: relative;
+    padding: 0.1rem;
+    font-size: 1rem;
+    line-height: 1;
+    overflow: hidden;
+    background: var(--color--light);
+    font-family: 'Vcrosdmono', sans-serif;
+    transition: color 0.5s;
+}
+.header .header-right .btn-tx{
+    position: relative;
+    font-size: 0.875rem;
+    color: var(--color--dark);
+    text-transform: uppercase;
+    -webkit-text-stroke-color: #0c0c0c;
+    z-index: 2;
+    white-space: nowrap;
+}
+.header .header-right .btn-wrapper::before {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--color--dark);
+    z-index: 0;
+    transition: bottom 0.3s ease-in-out;
+}
+.header .header-right .btn-wrapper:hover::before {
+    bottom: 0;
+}
+.header .header-right .btn-wrapper:hover .btn-tx{
+    color: var(--color--light);
+}
+
+.header .header-right .btn-defalt{}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Otneuemontreal';
+    src: url('../fonts/66b0b539393ab0f51b036f80_OTNeueMontreal-RegularSemiSqueezed.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Vcrosdmono';
+    src: url('../fonts/66b0b53980e538d00a8a1706_VCROSDMono.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Neuemontreal';
+    src: url('../fonts/66b0b5396b29dee6c327d720_NeueMontreal-Regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

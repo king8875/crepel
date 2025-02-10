@@ -1,0 +1,233 @@
+main{}
+
+.h-hero__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 300vh;
+    overflow: visible;
+    z-index: 1;
+}
+.h-hero__content-wrapper{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-top: 1.35rem;
+    inset: 0% 0% auto;
+    z-index: 2;
+}
+.h-hero__content-wrapper .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.h-hero__content-wrapper .container .main-tx-block{ }
+.h-hero__content-wrapper .container .main-tx-block .main-tx-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column-gap: 2.125rem;
+    grid-row-gap: 2.125rem;
+}
+
+.main-bottom-tx-block{
+    width: 100%;
+}
+.main-bottom-tx-block .mb-tx-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15.9rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.h-hero__wrapper-embed{
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    inset: 0%;
+}
+.h-hero__wrapper-embed .h-hero__embed-video{
+    border-radius: .3rem;
+    width: 13.5rem;
+    height: 24.06rem;
+    overflow: hidden;
+}
+
+
+.h-hero__sticky-wrapper{
+    position: sticky;
+    bottom: 0;
+    height: 200vh;
+    width: 100%;
+}
+.h-hero__sticky-wrapper .h-hero__image-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.h-hero__image-wrapper .mountain_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 3;
+}
+.h-hero__image-wrapper .cloud-right_img{
+    position: absolute;
+    width: 71rem;
+    opacity: .92;
+    inset: auto auto 1% -22%;
+    z-index: 4;
+}
+.h-hero__image-wrapper .cloud-left_img{
+    position: absolute;
+    width: 55.75rem;
+    opacity: .65;
+    inset: auto 0% 34% auto;
+    z-index: 2;
+}
+.h-hero__image-wrapper .main_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0%;
+    z-index: 0;
+}
+.h-hero__mask{
+    z-index: 1;
+    background-color: var(--color--dark);
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0%;
+}
+
+
+
+
+
+
+
+.h-hero__about-wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 300vh;
+    inset: auto 0% 0%;
+    pointer-events: none;
+    z-index: 2;
+}
+.h-hero__about-mask{
+    position: absolute;
+    height: 200vh;
+    width: 100%;
+    background: var(--color--dark);
+    opacity: 0;
+}
+.h-hero__about-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    padding-left: 17rem;
+    padding-right: 17rem;
+}
+.h-hero__about-top{
+    position: relative;
+    top: -8rem;
+}
+.h-hero__about-img{
+    position: absolute;
+    border-radius: .3rem;
+    width: 7rem;
+    height: 7.6rem;
+    inset: -4.9rem auto auto 0%;
+    overflow: hidden;
+}
+.h-hero__about-span{
+    padding-left: 7.6rem;
+}
+
+
+
+
+.h-hero__about-bot{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    inset: auto 0% 0%;
+    overflow: hidden;
+    z-index: 20;
+
+}
+.wave__grid{
+    display: flex;
+    flex-direction: column;
+}
+.wave__grid .wave-top{
+    display: flex;
+    justify-content: space-between;
+    gap: 30rem;
+}
+.wave__grid .wave-bot{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+.wave-one{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 4.1rem;
+    padding-right: 1.25rem;
+    background-color: var(--color--dark);
+}
+.wave-two {
+    background-color: var(--color--dark);
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 4.1rem;
+    padding-left: 1.25rem;
+    display: flex;
+}
+.wave-three{
+    background-color: var(--color--dark);
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 4.1rem;
+    padding-right: 1.25rem;
+    display: flex;
+}
+.wave-four{
+    background-color: var(--color--dark);
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 4.1rem;
+    padding-left: 1.25rem;
+    display: flex;
+}
+.wave-tx{
+    text-transform: uppercase;
+    font-family: Vcrosdmono,sans-serif;
+    font-size: .875rem;
+    line-height: 1;
+}
