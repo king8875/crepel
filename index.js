@@ -42,33 +42,34 @@ const wave = gsap.timeline({
         scrub:1,
     },
 });
-wave.to('.h-wave_img-wrapper .h-wave__image-parent',{
-    y:0
-})
-wave.to('.h-wave__image-parent img:nth-child(9)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(8)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(7)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(6)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(5)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(4)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(3)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(2)',{
-    opacity:0
-})
-wave.to('.h-wave__image-parent img:nth-child(1)',{
-    opacity:0
+wave.to('.h-wave_img-wrapper .h-wave__image-parent',{ y:0 })
+wave.to('.h-wave__image-parent img:nth-child(9)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(8)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(7)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(6)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(5)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(4)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(3)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(2)',{ opacity:0 })
+wave.to('.h-wave__image-parent img:nth-child(1)',{ opacity:0 });
+
+
+
+
+// h-action gsap
+const links = document.querySelectorAll('.h-action__img-wrapper .action__img-link');
+
+links.forEach((link) => {
+    const action = gsap.timeline({
+        scrollTrigger:{
+            trigger:link,
+            start:"60% 50%",
+            end:"60% 50%",
+            scrub:1,
+            markers:1,
+        }
+    })
 });
+action.to('.h-action__text', {
+    y:100
+})
