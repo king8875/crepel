@@ -58,18 +58,59 @@ wave.to('.h-wave__image-parent img:nth-child(1)',{ opacity:0 });
 
 // h-action gsap
 const links = document.querySelectorAll('.h-action__img-wrapper .action__img-link');
+const texts = document.querySelectorAll('.h-action__text');
+const texts01 = document.querySelectorAll('.h-action__text.two');
+const texts02 = document.querySelectorAll('.h-action__text.three');
 
-links.forEach((link) => {
-    const action = gsap.timeline({
-        scrollTrigger:{
-            trigger:link,
-            start:"60% 50%",
-            end:"60% 50%",
-            scrub:1,
-            markers:1,
-        }
-    })
+
+gsap.set(texts01,{autoAlpha:0});
+gsap.set(texts02,{autoAlpha:0});
+const ac1 = gsap.timeline({
+    scrollTrigger:{
+        trigger:links[0],
+        start:"100% 50%",
+        end: "100% 50%",
+        scrub:1,
+    }
 });
-action.to('.h-action__text', {
-    y:100
+
+ac1.to(texts,{
+    yPercent:-100
 })
+ac1.to(texts01,{
+    autoAlpha:1
+},"<")
+
+const ac2 = gsap.timeline({
+    scrollTrigger:{
+        trigger:links[1],
+        start:"100% 50%",
+        end: "100% 50%",
+        scrub:1,
+    }
+});
+ac2.to(texts,{
+    yPercent:-200
+})
+
+ac2.to(texts02,{
+    autoAlpha:1
+},"<");
+
+
+
+const images = document.querySelectorAll('.action__img-link');
+const sticky = document.querySelector('.h-action__sticky-wrapper .h-action__sticky');
+images.forEach(img => {
+    const actionMask = img.querySelector('.h-action__card-mask'); // 호버한 이미지의 마스크만 선택
+    img.addEventListener('mouseenter', () => {
+        gsap.to(sticky, { width: "40%", duration: 1, ease: "power2.in" }); // 너비 증가
+        gsap.to(actionMask,{opacity:.5});
+    });
+
+    img.addEventListener('mouseleave', () => {
+        gsap.to(sticky, { width: "100%", duration: 1, ease: "power2.in" }); // 원래 크기로 복귀
+        gsap.to(actionMask,{opacity:0});
+
+    });
+});
