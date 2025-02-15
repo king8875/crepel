@@ -119,3 +119,67 @@ images.forEach(img => {
 
 // h-spon gsap
 
+const sponItem = $('.h-spon-item');
+
+sponItem.on('mouseenter', function(){
+    const sponImg = $(this).find('.spon_img'); // 호버한 요소 내의 .spon_img 선택
+
+    gsap.to(sponImg, { 
+        scale: 1, 
+        duration: 0.5, 
+        ease: "steps(5)", 
+        snap: { 
+            scale: [0,0.3, 0.5,0.7, 1],
+        } 
+    });
+    gsap.to(sponImg, { 
+        duration: 0.5, 
+        ease: "steps(5)", 
+        keyframes: [
+            { rotate: 20 },  
+            { rotate: 0 },  
+            { rotate: -20 },  
+            { rotate: 0 }, 
+            { rotate: 0 }  
+        ]
+    });
+});
+sponItem.on('mouseleave', function(){
+    const sponImg = $(this).find('.spon_img'); 
+
+    gsap.to(sponImg, { 
+        scale: 0, 
+        duration: 0.5, 
+        ease: "steps(5)", 
+        snap: { scale: [1,0.7,0.5,0.3,0] }
+    });
+});
+
+
+// cursor js
+const cursor = $('.footer__cursor-parent');
+gsap.set('.footer__cursor-parent', { scale: 0, xPercent: -50, yPercent: -50 });
+const cursorvis = gsap.to('.footer__cursor-parent',{
+    scrollTrigger:{
+        trigger:'.ft__cursor-wrapper',
+        start:"0% 50%",
+        end:"100% 50%",
+        scrub:1,
+        onEnter: () => gsap.to('.footer__cursor-parent', { scale: 1, duration: 0.3 }), // 나타남
+        onLeave: () => gsap.to('.footer__cursor-parent', { scale: 0, duration: 0.3 }), // 사라짐
+        onEnterBack: () => gsap.to('.footer__cursor-parent', { scale: 1, duration: 0.3 }), // 다시 나타남
+        onLeaveBack: () => gsap.to('.footer__cursor-parent', { scale: 0, duration: 0.3 }) // 다시 사라짐
+
+    },
+});
+
+
+
+$(document).on('mousemove', function(e) {
+    gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.2, // 부드러운 이동
+        ease: "power2.out"
+    });
+});

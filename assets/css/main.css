@@ -570,7 +570,7 @@ main{}
 .h-spon-item-wrapper p{
     color: var(--color--dark);
     text-transform: none;
-    font-family: Neuemontreal,sans-serif;
+    font-family: 'Neuemontreal',sans-serif;
     font-size: 1.6875rem;
     font-weight: 400;
     line-height: 1.1rem;
@@ -589,5 +589,84 @@ main{}
     height: 100%;
     width: 100%;
     inset: 0%;
+    transform: scale(0);
     z-index: 2;
 }
+
+
+/* footer css */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    background-color: var(--color--light);
+}
+.footer .footer-wrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 11.6rem;
+    padding-bottom: 2.6rem;
+    z-index: 1;
+}
+.ft__cursor-wrapper{
+    padding: 0 1rem;
+}
+.ft__cursor-wrapper .cursor-top{}
+.ft__cursor-wrapper .cursor-top .graph__space{
+    padding-left: 7.25rem;
+}
+.ft__cursor-wrapper .cursor-top p{
+    color: var(--color--dark);
+    text-transform: none;
+    font-family: Neuemontreal,sans-serif;
+    font-size: 2.9rem;
+    font-weight: 400;
+    line-height: 2.9rem;
+}
+.ft__cursor-wrapper .cursor-bot{}
+.ft__cursor-wrapper .cursor-bot .cursor-bot-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    margin-left: 40%;
+}
+.cursor-bot-link{
+    color: var(--color--dark);
+    text-align: left;
+    letter-spacing: -.3rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Otneuemontreal',sans-serif;
+    font-size: 9.9rem;
+    font-weight: 400;
+    line-height: 7.9rem;
+    opacity: 0.2;
+    transition: all .5s;
+}
+.cursor-bot-link:hover{
+    opacity: 1;
+}
+
+.footer__cursor-parent{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* 클릭 방지 */
+    inset: 0%;
+    z-index: 3;
+    transform: scale(0);
+}
+.footer__cursor-parent img{
+    border-radius: .3rem;
+    width: 9rem;
+    height: auto;
+    position: relative;
+    left: 7.1rem;
+    overflow: hidden;
+}
+
