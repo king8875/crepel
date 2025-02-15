@@ -8,6 +8,26 @@ gsap.ticker.lagSmoothing(0);
 
 
 // h-hero gsap
+
+let herointro = gsap.timeline();
+herointro.from('.main-tx-top h1',{
+    y:200,
+    autoAlpha:0,
+    duration:1
+})
+herointro.from('.main-tx-bottom h1',{
+    y:100,
+    autoAlpha:0,
+    duration:1,
+    stagger:0.2
+})
+herointro.from('.main-bottom-tx-block .mb-tx-wrapper .link',{
+    y:100,
+    autoAlpha:0,
+    duration:0.5,
+    stagger:0.1
+});
+
 const hero = gsap.timeline({
     scrollTrigger:{
         trigger: $('.h-hero__sticky-wrapper'),
@@ -29,6 +49,31 @@ const hero1 = gsap.timeline({
 });
 hero1.to('.h-hero__about-mask',{ opacity:0.7 });
 
+
+const wave01 = gsap.timeline({
+    scrollTrigger:{
+        trigger: $('.h-hero__about-bot'),
+        start:"0% 90%",
+        end: "0% 90%",
+    }
+});
+wave01.to('.wave-one',{
+    width:"100%",
+    duration:3
+});
+wave01.to('.wave-two',{
+    width:"100%",
+    duration:3
+
+},"<");
+wave01.to('.wave-three',{
+    width:"100%",
+    duration:4
+},"<");
+wave01.to('.wave-four',{
+    width:"100%",
+    duration:4
+},"<");
 
 // h-wave gsap
 gsap.set('.h-wave_img-wrapper .h-wave__image-parent',{
@@ -163,7 +208,7 @@ const cursorvis = gsap.to('.footer__cursor-parent',{
     scrollTrigger:{
         trigger:'.ft__cursor-wrapper',
         start:"0% 50%",
-        end:"100% 50%",
+        end:"80% 50%",
         scrub:1,
         onEnter: () => gsap.to('.footer__cursor-parent', { scale: 1, duration: 0.3 }), // 나타남
         onLeave: () => gsap.to('.footer__cursor-parent', { scale: 0, duration: 0.3 }), // 사라짐
@@ -182,4 +227,12 @@ $(document).on('mousemove', function(e) {
         duration: 0.2, // 부드러운 이동
         ease: "power2.out"
     });
+});
+
+const ftLink = $('.ft__link');
+
+ftLink.on('mouseenter', function(){
+    gsap.to($(this),{
+        opacity: 0, duration: 0.2, repeat: 5, yoyo: true
+    })
 });
