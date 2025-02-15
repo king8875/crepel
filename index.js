@@ -57,28 +57,13 @@ const wave01 = gsap.timeline({
         end: "0% 90%",
     }
 });
-wave01.to('.wave-one',{
-    width:"100%",
-    duration:3
-});
-wave01.to('.wave-two',{
-    width:"100%",
-    duration:3
-
-},"<");
-wave01.to('.wave-three',{
-    width:"100%",
-    duration:4
-},"<");
-wave01.to('.wave-four',{
-    width:"100%",
-    duration:4
-},"<");
+wave01.to('.wave-one',{ width:"100%", duration:3 });
+wave01.to('.wave-two',{ width:"100%", duration:3 },"<");
+wave01.to('.wave-three',{ width:"100%", duration:4 },"<");
+wave01.to('.wave-four',{ width:"100%", duration:4 },"<");
 
 // h-wave gsap
-gsap.set('.h-wave_img-wrapper .h-wave__image-parent',{
-    y:50
-});
+gsap.set('.h-wave_img-wrapper .h-wave__image-parent',{ y:50 });
 const wave = gsap.timeline({
     scrollTrigger:{
         trigger:$('.h-wave_img-wrapper'),
@@ -98,15 +83,11 @@ wave.to('.h-wave__image-parent img:nth-child(3)',{ opacity:0 })
 wave.to('.h-wave__image-parent img:nth-child(2)',{ opacity:0 })
 wave.to('.h-wave__image-parent img:nth-child(1)',{ opacity:0 });
 
-
-
-
 // h-action gsap
 const links = document.querySelectorAll('.h-action__img-wrapper .action__img-link');
 const texts = document.querySelectorAll('.h-action__text');
 const texts01 = document.querySelectorAll('.h-action__text.two');
 const texts02 = document.querySelectorAll('.h-action__text.three');
-
 
 gsap.set(texts01,{autoAlpha:0});
 gsap.set(texts02,{autoAlpha:0});
@@ -119,12 +100,8 @@ const ac1 = gsap.timeline({
     }
 });
 
-ac1.to(texts,{
-    yPercent:-100
-})
-ac1.to(texts01,{
-    autoAlpha:1
-},"<")
+ac1.to(texts,{ yPercent:-100 })
+ac1.to(texts01,{ autoAlpha:1 },"<")
 
 const ac2 = gsap.timeline({
     scrollTrigger:{
@@ -134,13 +111,8 @@ const ac2 = gsap.timeline({
         scrub:1,
     }
 });
-ac2.to(texts,{
-    yPercent:-200
-})
-
-ac2.to(texts02,{
-    autoAlpha:1
-},"<");
+ac2.to(texts,{ yPercent:-200 })
+ac2.to(texts02,{ autoAlpha:1 },"<");
 
 
 
@@ -200,7 +172,6 @@ sponItem.on('mouseleave', function(){
     });
 });
 
-
 // cursor js
 const cursor = $('.footer__cursor-parent');
 gsap.set('.footer__cursor-parent', { scale: 0, xPercent: -50, yPercent: -50 });
@@ -214,11 +185,8 @@ const cursorvis = gsap.to('.footer__cursor-parent',{
         onLeave: () => gsap.to('.footer__cursor-parent', { scale: 0, duration: 0.3 }), // 사라짐
         onEnterBack: () => gsap.to('.footer__cursor-parent', { scale: 1, duration: 0.3 }), // 다시 나타남
         onLeaveBack: () => gsap.to('.footer__cursor-parent', { scale: 0, duration: 0.3 }) // 다시 사라짐
-
     },
 });
-
-
 
 $(document).on('mousemove', function(e) {
     gsap.to(cursor, {
@@ -233,6 +201,9 @@ const ftLink = $('.ft__link');
 
 ftLink.on('mouseenter', function(){
     gsap.to($(this),{
-        opacity: 0, duration: 0.2, repeat: 5, yoyo: true
+        opacity: 0, 
+        duration: 0.2, 
+        repeat: 5, 
+        yoyo: true
     })
 });
