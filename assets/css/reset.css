@@ -21,7 +21,7 @@
 a{ 
     text-decoration: none; 
     color: var(--color--light);
-    font-family: Neuemontreal,sans-serif;
+    font-family: 'Neuemontreal',sans-serif;
     font-size: .875rem;
     line-height: 1;
 }
