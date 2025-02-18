@@ -24,7 +24,18 @@
     line-height: 3.1rem;
 }
 
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
 
+.hidden{
+    display: none;
+}
 @media (max-width:479px) {
     .text__h1{
         margin: 0;

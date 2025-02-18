@@ -50,7 +50,6 @@ mm.add("(max-width:479px)", function(){
             start:"100% 90%",
             end: "100% 90%",
             scrub:1,
-            markers:1
 
         }
     });
@@ -119,14 +118,10 @@ mm.add("(min-width:480px)", function(){
 
         });
     });
-
 });
 
 
-
-
 // h-hero gsap
-
 let herointro = gsap.timeline();
 herointro.from('.main-tx-top h1',{
     y:200,
@@ -175,10 +170,22 @@ const wave01 = gsap.timeline({
         end: "0% 90%",
     }
 });
-wave01.to('.wave-one',{ width:"100%", duration:3 });
-wave01.to('.wave-two',{ width:"100%", duration:3 },"<");
-wave01.to('.wave-three',{ width:"100%", duration:4 },"<");
-wave01.to('.wave-four',{ width:"100%", duration:4 },"<");
+wave01.to('.h-hero__about-bot .wave-one',{ width:"30%", duration:1 });
+wave01.to('.h-hero__about-bot .wave-two',{ width:"30%", duration:1 },"<");
+wave01.to('.h-hero__about-bot .wave-three',{ width:"40%", duration:2 },"<");
+wave01.to('.h-hero__about-bot .wave-four',{ width:"40%", duration:2 },"<");
+
+const wave02 = gsap.timeline({
+    scrollTrigger:{
+        trigger: $('.h-video__wave-wrapper'),
+        start:"0% 90%",
+        end: "0% 90%",
+    }
+});
+wave02.to('.wave-one',{ width:"30%", duration:1 });
+wave02.to('.wave-two',{ width:"30%", duration:1 },"<");
+wave02.to('.wave-three',{ width:"40%", duration:2 },"<");
+wave02.to('.wave-four',{ width:"40%", duration:2 },"<");
 
 // h-wave gsap
 gsap.set('.h-wave_img-wrapper .h-wave__image-parent',{ y:50 });
@@ -201,16 +208,8 @@ wave.to('.h-wave__image-parent img:nth-child(3)',{ opacity:0 })
 wave.to('.h-wave__image-parent img:nth-child(2)',{ opacity:0 })
 wave.to('.h-wave__image-parent img:nth-child(1)',{ opacity:0 });
 
-
-
-
-
-
-
 // h-spon gsap
-
 const sponItem = $('.h-spon-item');
-
 sponItem.on('mouseenter', function(){
     const sponImg = $(this).find('.spon_img'); // 호버한 요소 내의 .spon_img 선택
 
